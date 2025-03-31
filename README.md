@@ -9,20 +9,21 @@
 ![Nano-RC12 photo](Nano/RC12-2/RC12-2.jpg)
 
 #
-### [Teensy 4.1 RC11](Teensy/RC11_PCB)
+### [Teensy 4.1 RC11-2](Teensy/RC11-2_PCB)
 - uses a Teensy & an on-board mounted Cytron for rate control
 	- either (1) [MD13S](https://www.cytron.io/p-13amp-6v-30v-dc-motor-driver) for single rate control
  	- or (1) [MDD10A](https://www.cytron.io/p-10amp-5v-30v-dc-motor-driver-2-channels) for dual rate control
 - small components are surface mount parts
-- Teensy Ethernet or ESP8266 (ESP-12F) Wifi
+- Teensy Ethernet 
 - can control two rates and eight sections
-	- 8 relays (SPST 12V output)
-	- (2) 5V analog (pressure) inputs
-	- (2) optically isolated digital (rate/pulse) inputs (5V)
-- 5V Serial TTL header
-- 3.3V I2C headers
+	- 8 relays (SPDT 12V output)
+	- (1) 5V or 12V analog (pressure) input, potentiometer adjustable filtering
+	- (2) optically isolated digital (rate/pulse) inputs (5V or 12V)
+- 3.3V I2C headers (Qwiic)
 	- supports optional external RelayDriver5 I2C board
-![Teensy-RC11 photo](Teensy/RC11_PCB/PCB/RC11.jpg)
+ - work switch
+ - canbus
+![RC11-2](https://github.com/user-attachments/assets/0e30f5d2-c3a5-427f-91ff-3a5899effb45)
 
 #
 ### [ESP32 RC15](ESP32/RC15)
