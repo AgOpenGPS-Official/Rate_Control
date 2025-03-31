@@ -1,0 +1,124 @@
+(footprint "TestPoint_THTPad_D2.5mm_Drill1.2mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "THT pad as test Point, diameter 2.5mm, hole diameter 1.2mm ")
+	(tags "test point THT pad")
+	(property "Reference" "REF**"
+		(at 0 -2.148 0)
+		(layer "F.SilkS")
+		(uuid "60136a54-94b6-4916-a021-68cafec7f447")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Pressure Ohms2"
+		(at 0 2.25 0)
+		(layer "F.Fab")
+		(uuid "38d6edc5-c96d-415a-b5f3-a76ba7c66c53")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a1ba6681-6a4c-42c2-bdbb-abd18e6cc447")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b810cf30-729d-46e2-a276-bb8492260c2b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "test point"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "40fa0f68-b5c7-4aa3-a6cd-ab2b59a6a1c0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DESCRIPTION" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9e8ad4bb-a59b-48cf-9bf5-b9586882bdcd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(fp_circle
+		(center 0 0)
+		(end 0 1.45)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "dfb3b843-8863-4e05-a32a-8817b6512ef9")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.75 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "9c173b10-031d-4463-b602-62530b1f4617")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -2.15 0)
+		(layer "F.Fab")
+		(uuid "4d75d5dd-6d6f-4cc6-bd81-3ba2db3c6b86")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2.5 2.5)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "639047b2-075b-4d73-967b-7fc7c902176d")
+	)
+)

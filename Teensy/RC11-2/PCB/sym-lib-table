@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RC10-rescue")(type "Legacy")(uri "${KIPRJMOD}/RC10-rescue.lib")(options "")(descr ""))
+  (lib (name "RC11-rescue")(type "Legacy")(uri "${KIPRJMOD}/RC11-rescue.lib")(options "")(descr ""))
+  (lib (name "RC11-2_Symbols")(type "KiCad")(uri "${KIPRJMOD}/RC11-2_Symbols.kicad_sym")(options "")(descr ""))
+)

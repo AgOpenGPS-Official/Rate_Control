@@ -1,0 +1,228 @@
+(footprint "Grove"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -6.7768 0.117 0)
+		(layer "F.SilkS")
+		(uuid "a2e2e7a9-4a74-4ada-afa4-7de27bbe34ac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Motor1 GRV"
+		(at 0.2232 -3.283 0)
+		(layer "F.SilkS")
+		(uuid "2cfb1065-bb6b-43e2-8370-4799d7d753d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "MyFootprints:Grove"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ef2c190c-e4cc-4a4e-84ea-126ec0b5ce50")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6566236f-4957-499f-9c23-63a3bda20b4b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f7ae00be-03c5-4643-b74f-be78f2bac757")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -5 -2.15)
+		(end 5 -2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b3d4d087-1431-44d8-a87c-7b298dded1f4")
+	)
+	(fp_line
+		(start -5 2.95)
+		(end -5 -2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1920a7d9-8cf5-47a5-b587-2f64389e3520")
+	)
+	(fp_line
+		(start 5 -2.15)
+		(end 5 2.95)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4294b49a-0540-4499-99ca-9f4d84da7349")
+	)
+	(fp_line
+		(start 5 2.95)
+		(end -5 2.95)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "22a19315-acb9-4de4-9b7f-e7a2d68acd9e")
+	)
+	(fp_line
+		(start -5.25 -2.4)
+		(end 5.25 -2.4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "befb6225-0f16-4580-90e3-3a4d69ae3170")
+	)
+	(fp_line
+		(start -5.25 3.2)
+		(end -5.25 -2.4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "902da3d0-199b-446d-8bca-4611a0155355")
+	)
+	(fp_line
+		(start 5.25 -2.4)
+		(end 5.25 3.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "28f74dce-ffbd-491c-b795-9da92560f877")
+	)
+	(fp_line
+		(start 5.25 3.2)
+		(end -5.25 3.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7430c2cf-0391-490c-a80c-954689d6c4a0")
+	)
+	(fp_line
+		(start -5 -2.15)
+		(end 5 -2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c5369683-fa0f-4330-b15d-07e8c3eab174")
+	)
+	(fp_line
+		(start -5 2.95)
+		(end -5 -2.15)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0b5ebe48-3fc0-4c1b-99bb-ed148326dbc3")
+	)
+	(fp_line
+		(start 5 -2.15)
+		(end 5 2.95)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "40617a2f-d5b3-477d-8755-f62abfeac750")
+	)
+	(fp_line
+		(start 5 2.95)
+		(end -5 2.95)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3addd726-172f-45f1-8fb7-6bee21c529d9")
+	)
+	(pad "1" thru_hole rect
+		(at -3 0)
+		(size 1.308 1.308)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b3cc7390-9b8e-4f12-b492-af8ea5f24302")
+	)
+	(pad "2" thru_hole circle
+		(at -1 0)
+		(size 1.308 1.308)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "89b623bb-3909-4ecb-a9a1-a620512f1b05")
+	)
+	(pad "3" thru_hole circle
+		(at 1 0)
+		(size 1.308 1.308)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c21d5ee0-88a0-4d97-a953-4c9664174eaf")
+	)
+	(pad "4" thru_hole circle
+		(at 3 0)
+		(size 1.308 1.308)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "da67b1be-b168-43cc-b9c4-4f0c007c98dc")
+	)
+	(model "${MYKICAD}/My3dShapes/110990030.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)

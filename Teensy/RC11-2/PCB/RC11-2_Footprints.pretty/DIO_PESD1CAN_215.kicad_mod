@@ -1,0 +1,477 @@
+(footprint "DIO_PESD1CAN_215"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.127 -2.3114 180)
+		(layer "F.SilkS")
+		(uuid "a357829b-a4ad-4091-ae1e-e435804d8c5d")
+		(effects
+			(font
+				(size 0.64 0.64)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PESD1CAN_215  C15771"
+		(at 4.5974 2.1336 180)
+		(layer "F.Fab")
+		(uuid "f9a322f1-c49d-4509-b578-4fce7e66a1ea")
+		(effects
+			(font
+				(size 0.64 0.64)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "PESD1CAN_215:DIO_PESD1CAN_215"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "181cef9b-a4ad-4ded-8c59-4e202190a556")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "12566837-ebd4-4bf6-97b4-6e10e23defbf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1338359d-2b96-47d9-81d5-589ec7d29ebc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MF" "NXP Semiconductors"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "052a2f06-60ac-4b3f-9d4d-1d7edf2c9751")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DESCRIPTION" "ESD Suppressor Diode TVS Bi-Dir 24V Automotive 3-Pin SOT-23 T/R"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f3e3228c-57a3-4456-921e-688a5ec456e0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PACKAGE" "TO-236-3 Nexperia USA Inc."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "077fecbd-97aa-4014-a3c8-6da855de192b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PRICE" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "225fe3f4-e4d4-4cc9-bfc0-cdd67fe91516")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2d21e91b-e27b-4962-9189-7cbe1ea4f676")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Check_prices" "https://www.snapeda.com/parts/PESD1CAN215/NXP+Semiconductors/view-part/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "45474308-b224-4608-bdd0-59763508fa61")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Price" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "620cef78-01a6-4fac-8bd7-ac858038a1a6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SnapEDA_Link" "https://www.snapeda.com/parts/PESD1CAN215/NXP+Semiconductors/view-part/?ref=snap"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2e5b9433-ac1b-4988-b1e8-1aa97d939258")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MP" "PESD1CAN215"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "16803e77-1aa8-4177-81c3-bb2980cec0f4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description_1" "\n                        \n                            Bi-Direct ESD protect diode PESD1CAN\n                        \n"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "73ad679d-014a-4726-bc3f-2a9338890013")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Availability" "Not in stock"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f5e89bb-a678-4a29-883e-f67084442524")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "AVAILABILITY" "In Stock"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ffc50572-812a-414c-8147-d876cc459e33")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PURCHASE-URL" "https://pricing.snapeda.com/search/part/PESD1CAN,215/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "386cf2b4-0b0e-4973-932f-ae3a95186679")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_poly
+		(pts
+			(xy -1.3 -1.2) (xy -0.7 -1.2) (xy -0.7 -0.7) (xy -1.3 -0.7)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Paste")
+		(uuid "636f4ead-f520-4066-b4fc-d9fb107aca0f")
+	)
+	(fp_poly
+		(pts
+			(xy -1.3 0.7) (xy -0.7 0.7) (xy -0.7 1.2) (xy -1.3 1.2)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Paste")
+		(uuid "8ab69088-11ef-43ee-83b5-814b15acace6")
+	)
+	(fp_poly
+		(pts
+			(xy 0.7 -0.25) (xy 1.3 -0.25) (xy 1.3 0.25) (xy 0.7 0.25)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Paste")
+		(uuid "de37ba49-9379-4802-89b8-db0a9000edb7")
+	)
+	(fp_line
+		(start -0.3365 -1.45)
+		(end 0.65 -1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "46441d54-428e-45af-9ffc-7a4d69f6c215")
+	)
+	(fp_line
+		(start 0.65 -1.45)
+		(end 0.65 -0.62)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "697e14c5-4511-4720-b7fa-b680114054e9")
+	)
+	(fp_line
+		(start 0.65 0.62)
+		(end 0.65 1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3f40c683-62ac-4633-86ea-968c436a51c0")
+	)
+	(fp_line
+		(start 0.65 1.45)
+		(end -0.3365 1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0339a206-1abd-4730-ba37-627da4db20ea")
+	)
+	(fp_circle
+		(center -2 -0.95)
+		(end -1.9 -0.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d03d3331-9746-4f75-80fc-8f7ece3085f3")
+	)
+	(fp_poly
+		(pts
+			(xy -1.35 -1.25) (xy -0.65 -1.25) (xy -0.65 -0.65) (xy -1.35 -0.65)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Mask")
+		(uuid "c8045cf3-f305-46e2-aae6-ad22e687db9d")
+	)
+	(fp_poly
+		(pts
+			(xy -1.35 0.65) (xy -0.65 0.65) (xy -0.65 1.25) (xy -1.35 1.25)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Mask")
+		(uuid "44a0d615-061b-47d7-bac4-039f721ac881")
+	)
+	(fp_poly
+		(pts
+			(xy 0.65 -0.3) (xy 1.35 -0.3) (xy 1.35 0.3) (xy 0.65 0.3)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Mask")
+		(uuid "45a4e9d6-275a-43d6-84af-97312ad98964")
+	)
+	(fp_line
+		(start -1.6 -1.7)
+		(end 1.6 -1.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "833d4229-872d-4136-b859-a5829addcc2a")
+	)
+	(fp_line
+		(start -1.6 1.7)
+		(end -1.6 -1.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ac14a815-280d-4cbf-9a18-280d40b36aca")
+	)
+	(fp_line
+		(start 1.6 -1.7)
+		(end 1.6 1.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "abf7592e-681c-41b1-b126-ee853bc9cbec")
+	)
+	(fp_line
+		(start 1.6 1.7)
+		(end -1.6 1.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0b9da1f7-54de-4000-9e31-d9a372922c60")
+	)
+	(fp_line
+		(start -0.65 -1.45)
+		(end 0.65 -1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "161a97b0-7142-4809-997f-c52448125725")
+	)
+	(fp_line
+		(start -0.65 1.45)
+		(end -0.65 -1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "066c7726-ecb2-4fd0-b18c-a5c7ec4f4c0c")
+	)
+	(fp_line
+		(start 0.65 -1.45)
+		(end 0.65 1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "db484433-75c0-4d5b-9848-f1616d4fdb58")
+	)
+	(fp_line
+		(start 0.65 1.45)
+		(end -0.65 1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bbea97e2-e81b-4098-999b-1e6813eb3ded")
+	)
+	(fp_circle
+		(center -2 -0.95)
+		(end -1.9 -0.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "a82d6e58-7c8b-477a-9703-681a6d91474e")
+	)
+	(pad "1" smd rect
+		(at -1 -0.95)
+		(size 0.7 0.6)
+		(layers "F.Cu")
+		(uuid "a5a9d263-7956-41d9-a1fe-a6f4785ddeb2")
+	)
+	(pad "2" smd rect
+		(at -1 0.95)
+		(size 0.7 0.6)
+		(layers "F.Cu")
+		(uuid "7bd3e305-55c0-477c-a9c3-e825169657b2")
+	)
+	(pad "3" smd rect
+		(at 1 0)
+		(size 0.7 0.6)
+		(layers "F.Cu")
+		(uuid "b5ad0ad9-ec66-4788-b2c5-c3f0b0da8b79")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

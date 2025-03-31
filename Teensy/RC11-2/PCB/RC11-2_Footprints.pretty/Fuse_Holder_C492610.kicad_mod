@@ -1,0 +1,162 @@
+(footprint "Fuse_Holder_C492610"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "https://www.lcsc.com/product-detail/span-style-background-color-ff0-Fuse-span-Holders_XFCN-XF-508P-A_C2935469.html")
+	(property "Reference" "REF**"
+		(at 0.98 -1.17 180)
+		(layer "F.SilkS")
+		(uuid "13052fe8-8def-4a10-afa6-0f9d120587de")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C492610"
+		(at 10.5 -1 180)
+		(layer "F.Fab")
+		(uuid "6591f11f-dd88-4fb4-a36b-e553fbf983b9")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+			)
+		)
+	)
+	(property "Footprint" "MyFootprints:Fuse_Holder_C492610"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "59848df4-9735-4179-9f5e-84e526bfcff7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "375780c9-1278-4a35-9963-6f9017ed494a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Fuse"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "df292853-37ac-4424-a18b-30c39cda91d1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DESCRIPTION" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0717c99a-b2af-4b5e-ae90-219dd842b6bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start 0 0)
+		(end 0 4.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8a333663-1bfa-4509-a1b1-cbed69457ef7")
+	)
+	(fp_line
+		(start 0 0)
+		(end 14.8 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d02d2a23-c30d-443f-bbec-ae99548a284a")
+	)
+	(fp_line
+		(start 0 4.8)
+		(end 14.8 4.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ed17bf6-e807-41ab-acae-6c8a0a307beb")
+	)
+	(fp_line
+		(start 14.8 0)
+		(end 14.8 4.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c19b8dcb-68d8-4664-875f-606dd5eca9ac")
+	)
+	(pad "1" thru_hole rect
+		(at 1.5 2.75 90)
+		(size 3 2)
+		(drill oval 1.9 0.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f1ea636b-5a8d-4b8c-b1b7-010990c739bf")
+	)
+	(pad "1" thru_hole oval
+		(at 5.2 2.75 90)
+		(size 3 2)
+		(drill oval 1.9 0.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1a8a5b40-06b8-4e39-be65-f06580fe25c7")
+	)
+	(pad "2" thru_hole oval
+		(at 9.5 2.75 90)
+		(size 3 2)
+		(drill oval 1.9 0.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "907dbb3d-bc69-4d4b-b86c-fef39525e632")
+	)
+	(pad "2" thru_hole oval
+		(at 13.2 2.75 90)
+		(size 3 2)
+		(drill oval 1.9 0.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "dd8c012a-4a96-4ffa-aad2-c4cba529d792")
+	)
+	(model "${KICAD6_3DMODEL_DIR}/Fuse.3dshapes/Fuseholder_Blade_Mini_Keystone_3568.step"
+		(offset
+			(xyz 3 -1.25 0)
+		)
+		(scale
+			(xyz 0.9 0.6 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

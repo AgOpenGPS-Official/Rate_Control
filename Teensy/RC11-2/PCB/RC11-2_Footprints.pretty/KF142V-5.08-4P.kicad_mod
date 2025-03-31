@@ -1,0 +1,201 @@
+(footprint "KF142V-5.08-4P"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 22.9032 -3.3782 0)
+		(layer "F.SilkS")
+		(uuid "b2ea2856-bb92-4b20-9b70-3a3ee9418796")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "KF142V-5.0-4P"
+		(at 12.2936 -1.524 0)
+		(layer "F.Fab")
+		(uuid "1600d470-7e15-424f-9cc5-3226fac99e72")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "MyFootprints:KF142V-5.08-4P"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a53c257-da2a-42af-befe-90c2b2ffe0a6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "73f45bdc-0b8f-4c94-be1d-37b7e641f917")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b72fad56-1a5f-44d6-8570-d28b1f726691")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start 0 0)
+		(end 0 13.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d62a9750-5178-43dc-ba25-af1accb9c9b8")
+	)
+	(fp_line
+		(start 0 0)
+		(end 22.86 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c6ec0148-b32f-49c2-a43c-2b599d578836")
+	)
+	(fp_line
+		(start 0 10.5)
+		(end 22.86 10.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e7c816f8-7963-45ed-b672-8a4f1d2de0ee")
+	)
+	(fp_line
+		(start 0 13.7)
+		(end 22.86 13.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9a634099-11b4-416e-9cb9-a61e7899c8b2")
+	)
+	(fp_line
+		(start 22.86 0)
+		(end 22.86 13.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "449a7dbd-3df0-49ef-a36b-0bc89ae4e8a8")
+	)
+	(fp_text user "Button side"
+		(at 11.5316 12.0142 0)
+		(layer "F.SilkS")
+		(uuid "4e07d6e3-f70e-43ed-bbe7-043bf334344e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 20.32 1.5)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e3d51c43-ffcf-474f-9a0c-6b05715faecc")
+	)
+	(pad "1" thru_hole rect
+		(at 20.32 9.12)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f4d147d7-0958-4d84-8bc3-a0f529df6a58")
+	)
+	(pad "2" thru_hole circle
+		(at 15.24 1.5)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "bcda07ff-35eb-4049-a841-e66584be91b3")
+	)
+	(pad "2" thru_hole circle
+		(at 15.24 9.12)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c7f2647b-1721-4ac9-b8ce-6e9d0197df9c")
+	)
+	(pad "3" thru_hole circle
+		(at 10.16 1.5)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "17fccb1a-3830-4b20-a827-324725e162fd")
+	)
+	(pad "3" thru_hole circle
+		(at 10.16 9.12)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "779ae134-6579-4ef4-80e1-49889f48807b")
+	)
+	(pad "4" thru_hole circle
+		(at 5.08 1.5)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8121d10f-6440-457e-9f74-3a7aa01acf0b")
+	)
+	(pad "4" thru_hole circle
+		(at 5.08 9.12)
+		(size 2.6 2.6)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "bcd97519-df61-420f-9ab6-917f34057562")
+	)
+	(model "${MYKICAD}/My3dShapes/c-1-2834014-4-1-3d.stp"
+		(offset
+			(xyz 11.5 -13.5 6)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)

@@ -1,0 +1,153 @@
+(footprint "PowerPin"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "#10, 4.8mm")
+	(property "Reference" "REF**"
+		(at 8 -0.4 0)
+		(layer "F.SilkS")
+		(uuid "cf75daf4-5f67-4615-a735-f278b6dd4786")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "12V"
+		(at 10.57 1.08 0)
+		(layer "F.Fab")
+		(uuid "41bc85bc-aade-40e9-a701-1e239cf0da3b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "MyFootprints:PowerPin"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8202ccba-d3a7-46ad-be95-d8d32b5e166f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "02301317-fc0b-4f04-8787-063bae8800ef")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "06a4910d-d868-4764-bde3-7eafe8411896")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DESCRIPTION" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1d23e08d-0085-4301-876a-7e088e45746a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole exclude_from_pos_files)
+	(fp_circle
+		(center 0 0)
+		(end 6.5 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "a5198e9a-af20-4d5e-9a0f-1894caa63d31")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 7 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "86ecdf65-d0c0-44ac-b017-a54aa7b5e8e5")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "3ba7cbad-5d7f-423f-917d-4f84497d25f6")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 6.3 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "42de60d4-4745-40aa-b2f3-91f7fed1cfc8")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "dac769ef-cf59-4eeb-bbd3-7a7b08375d63")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 12 12)
+		(drill 4.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a46482fe-b46a-48b7-9164-707401fefb27")
+	)
+	(model "${KISYS3DMOD}/Connector.3dshapes/Banana_Jack_1Pin.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 2 2 2)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

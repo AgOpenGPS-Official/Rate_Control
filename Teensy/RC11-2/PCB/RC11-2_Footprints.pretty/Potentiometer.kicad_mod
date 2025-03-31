@@ -1,0 +1,206 @@
+(footprint "Potentiometer"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr " C118954")
+	(tags "Potentiometer horizontal Piher T-16H Single, C118954")
+	(property "Reference" "REF**"
+		(at 0.5 -8 0)
+		(layer "F.SilkS")
+		(uuid "c54bdb5f-40ae-4cc1-908a-c883a38fab25")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "27K"
+		(at 0.5 3 180)
+		(layer "F.Fab")
+		(uuid "5d6608b6-2c3a-4849-b7b2-02d8b7238e78")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "MyFootprints:Potentiometer"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b52c5b74-a5ec-4c52-8201-d2e173d3a958")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1e1c6db3-0e14-4032-a5fe-2d17c808f882")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Potentiometer, US symbol"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4dd9151b-9a04-44e5-a587-3730b6322d10")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DESCRIPTION" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fb96b2b9-16d3-4b4b-a7d8-4c0eb985f45f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.45 -7.25)
+		(end 2.4 -7.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d970ecab-d95f-4363-878d-f4debb5ea6a8")
+	)
+	(fp_line
+		(start -2.45 2.25)
+		(end -2.45 -7.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9c6feb82-4e6f-4439-b74c-ea9b2338172e")
+	)
+	(fp_line
+		(start -2.45 2.25)
+		(end 2.4 2.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ad9fe09-f9c3-47f0-922c-f600e953386c")
+	)
+	(fp_line
+		(start 2.4 2.25)
+		(end 2.4 -7.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "72dfcf91-1bc7-45f8-b308-2dce3b764eb0")
+	)
+	(fp_line
+		(start -2.33 2.25)
+		(end -2.33 -7.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0cddcaec-d50b-4a4a-aaea-7c89bc14d26e")
+	)
+	(fp_line
+		(start -2.33 2.25)
+		(end 2.28 2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3a6ad9d7-823a-4a2c-aaf1-08b1bb39e218")
+	)
+	(fp_line
+		(start 2.28 -7.25)
+		(end -2.33 -7.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "757c71c8-77d5-4ebe-8005-9dce3dc062d2")
+	)
+	(fp_line
+		(start 2.28 2.25)
+		(end 2.28 -7.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "70f29ee1-5853-4ca3-96ed-da092a7b5463")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -8 180)
+		(layer "F.Fab")
+		(uuid "67755bf9-b20c-45f3-94db-92b071500094")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e3073092-9cea-4495-a07d-f6f1aa4ab699")
+	)
+	(pad "2" thru_hole circle
+		(at 0 -2.5)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2970e974-06f0-46f6-81f7-ec95a892ab83")
+	)
+	(pad "3" thru_hole circle
+		(at 0 -5)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "058a739c-09ef-4ca1-a259-cdaf3260ba45")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Potentiometer_THT.3dshapes/Potentiometer_Bourns_3299Y_Vertical.step"
+		(offset
+			(xyz 1 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)

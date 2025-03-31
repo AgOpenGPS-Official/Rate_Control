@@ -1,0 +1,59 @@
+7:01 PM 3/29/2025
+
+Module ID	0
+Sensor Count	2
+Wifi Port	-
+Relay Control	GPIOs
+Invert Relays
+Invert Flow
+No Ads1115
+
+Flow1		28
+Flow2		29
+Dir1		37
+Dir2		14
+PWM1		36
+PWM2		15
+Work Pin	30
+Pressure	40
+
+Relay1		8
+Relay2		9
+Relay3		10
+Relay4		11
+Relay5		12
+Relay6		25
+Relay7		26
+Relay8		27
+
+no wifi
+
+3 wire valves
+
+CanBus		RX 23, TX 22
+
+pinout:
+1	M1A
+2	R1
+3	R2
+4	R3
+5	R4
+6	R5
+7	R6
+8	R7
+9	M1B
+10	5V
+11	Flow1
+12	Flow2
+13	Work switch
+14	Pressure
+15	R8
+16	M2A
+17	M2B
+18	Can Low
+19	Can High
+20	GND
+21	GND
+22	12V
+23	12V
+

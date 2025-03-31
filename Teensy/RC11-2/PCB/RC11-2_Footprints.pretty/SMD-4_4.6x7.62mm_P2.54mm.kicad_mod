@@ -1,0 +1,292 @@
+(footprint "SMD-4_4.6x7.62mm_P2.54mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf")
+	(property "Reference" "REF**"
+		(at 0 -3.64 0)
+		(layer "F.SilkS")
+		(uuid "c26dc2f0-5192-491b-bc1e-04c87487073c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PC817  C66405"
+		(at 0 4.41 0)
+		(layer "F.Fab")
+		(uuid "f3de1cbc-e92f-4fd8-b6f7-bc43b39ba7e4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "digikey-footprints:SMD-4_4.6x7.62mm_P2.54mm"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "62d654b3-1a59-46b5-b8c9-12a130f9ee7f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0fdec81f-5cc5-42c9-8c6c-7e0167ded937")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "59beb62c-2a9e-4772-973e-d6d1db059021")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.9 2.1)
+		(end -3.9 2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8b33e736-9d11-425a-86d3-c09edb080175")
+	)
+	(fp_line
+		(start -3.9 2.4)
+		(end -3.6 2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2fb8e7ab-c21e-4b51-bfb5-0eda24765233")
+	)
+	(fp_line
+		(start -3.6 -2.1)
+		(end -4.8 -2.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9f228e6f-4264-49ca-be7e-03adda3db893")
+	)
+	(fp_line
+		(start -3.6 -2.1)
+		(end -3.3 -2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c219b51a-cacc-4f6f-96bd-2cdaf659a02b")
+	)
+	(fp_line
+		(start -3.3 -2.4)
+		(end -2.8 -2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "16cdc24c-812b-4bdd-96d8-65ff8eb716f3")
+	)
+	(fp_line
+		(start 3.9 -2.4)
+		(end 3.6 -2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3b960b76-50cc-4739-884c-a25ad644175d")
+	)
+	(fp_line
+		(start 3.9 -2.1)
+		(end 3.9 -2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "541e99cc-e48d-4f35-8694-d9f456f0d3f1")
+	)
+	(fp_line
+		(start 3.9 2.1)
+		(end 3.9 2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "06ce2ed0-fd67-4773-badc-154be2455bd5")
+	)
+	(fp_line
+		(start 3.9 2.4)
+		(end 3.5 2.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f92f4e34-cfe9-445b-8357-7d978a9af24a")
+	)
+	(fp_line
+		(start -5.4 -2.55)
+		(end 5.4 -2.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c5a70483-21be-4b44-ba63-1b62476d90ba")
+	)
+	(fp_line
+		(start -5.4 2.55)
+		(end -5.4 -2.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f5664516-19e8-402c-b5a4-964cd4574051")
+	)
+	(fp_line
+		(start -5.4 2.55)
+		(end 5.4 2.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "17fdb60a-2173-4ce9-89a9-b7df753f8aa4")
+	)
+	(fp_line
+		(start 5.4 -2.55)
+		(end 5.4 2.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2d0c33f6-8a99-430b-85b2-703462e44f73")
+	)
+	(fp_line
+		(start -3.81 2.3)
+		(end 3.81 2.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e5e0dd79-d3f7-43aa-9757-33b6c8272928")
+	)
+	(fp_line
+		(start -3.8 -1.6)
+		(end -3.8 2.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8d5f17b6-39ac-4d74-ad67-46d771d67291")
+	)
+	(fp_line
+		(start -3.8 -1.6)
+		(end -3.1 -2.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9d6c53ad-c078-45f0-b6f9-5b38c1986cf5")
+	)
+	(fp_line
+		(start -3.1 -2.3)
+		(end 3.8 -2.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2f7eecff-b710-43b5-b769-b231604203d2")
+	)
+	(fp_line
+		(start 3.81 -2.3)
+		(end 3.81 2.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ef4d42b5-7c04-4e8a-a9b5-eb3ab681f852")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "dc09ad32-23b8-46d1-b059-09da55c989ba")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.5 -1.27)
+		(size 1.3 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "97cc61df-9d9a-42c3-8a6d-985d2f00c0ee")
+	)
+	(pad "2" smd rect
+		(at -4.5 1.27)
+		(size 1.3 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "b7bf6380-8a38-4a93-a155-f95756e2f4d4")
+	)
+	(pad "3" smd rect
+		(at 4.5 1.27)
+		(size 1.3 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "18a43b2d-c8b7-4168-af3c-275261497afa")
+	)
+	(pad "4" smd rect
+		(at 4.5 -1.27)
+		(size 1.3 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "7af378b2-0f1b-4b73-8cf3-22ae698b5cc8")
+	)
+	(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/Diode_Bridge_Vishay_MBLS.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1.6 0.7 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

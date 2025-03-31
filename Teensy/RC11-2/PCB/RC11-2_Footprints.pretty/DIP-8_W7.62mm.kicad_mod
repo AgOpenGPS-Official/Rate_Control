@@ -1,0 +1,307 @@
+(footprint "DIP-8_W7.62mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "8-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils)")
+	(tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil")
+	(property "Reference" "REF**"
+		(at 0.14 -2.44 180)
+		(layer "F.SilkS")
+		(uuid "5506a47e-fa4a-4b56-b083-369152a3e7f2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MCP2562-E-P"
+		(at 3.81 9.95 180)
+		(layer "F.Fab")
+		(uuid "6ddc9e3f-bd99-46c4-82ba-e9cf00d5088b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fd630d53-06cc-4b92-9ad4-b6249be3c16f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e976fb58-925f-4702-89f7-e203a59bf82c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "High-Speed CAN Transceiver, 1Mbps, 5V supply, Vio pin, -40C to +125C, DIP-8"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d64b5a62-9eb7-4130-9360-c6504fe41b11")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start 1.16 -1.33)
+		(end 1.16 8.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "29a5a853-0fc4-4904-9503-707eb24fac19")
+	)
+	(fp_line
+		(start 1.16 8.95)
+		(end 6.46 8.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4e1cba58-ef90-4e34-bafd-4ff60b3d6969")
+	)
+	(fp_line
+		(start 2.81 -1.33)
+		(end 1.16 -1.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0da87e17-286a-4102-8489-bc89e33ed65f")
+	)
+	(fp_line
+		(start 6.46 -1.33)
+		(end 4.81 -1.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a0043f22-9357-456c-bbf0-3a48b6bb3613")
+	)
+	(fp_line
+		(start 6.46 8.95)
+		(end 6.46 -1.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "077eda21-d556-4c1a-9e46-6335dc608cd9")
+	)
+	(fp_arc
+		(start 4.81 -1.33)
+		(mid 3.81 -0.33)
+		(end 2.81 -1.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d3ff71ab-c676-449c-9e45-2b0f638312ac")
+	)
+	(fp_line
+		(start -1.1 -1.55)
+		(end -1.1 9.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a8e07124-daad-4af1-8048-b16e330aea77")
+	)
+	(fp_line
+		(start -1.1 9.15)
+		(end 8.7 9.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b6ae928f-8681-463c-b4fc-aa3fc4aabf56")
+	)
+	(fp_line
+		(start 8.7 -1.55)
+		(end -1.1 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "db03b652-b8b2-4b9e-9db2-480ada68b93b")
+	)
+	(fp_line
+		(start 8.7 9.15)
+		(end 8.7 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c83fc9c8-632b-4140-b669-c5e4752a5b97")
+	)
+	(fp_line
+		(start 0.635 -0.27)
+		(end 1.635 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "704bc878-1504-4001-8fa6-cf7ce39c831c")
+	)
+	(fp_line
+		(start 0.635 8.89)
+		(end 0.635 -0.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1a62c581-73ef-487b-8d6e-5e3bebcb63d7")
+	)
+	(fp_line
+		(start 1.635 -1.27)
+		(end 6.985 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "71ac2d21-9bbe-4e96-9e38-745821e37582")
+	)
+	(fp_line
+		(start 6.985 -1.27)
+		(end 6.985 8.89)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cd6763d9-bd1e-4e06-80a8-63d174f2540c")
+	)
+	(fp_line
+		(start 6.985 8.89)
+		(end 0.635 8.89)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d5de720f-166d-45a0-844e-4c7522984382")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.81 3.81 180)
+		(layer "F.Fab")
+		(uuid "71cf16dd-40cf-4c49-8215-961788b1a07a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "86489a46-f046-48a7-9e9f-ea3bce04f7cd")
+	)
+	(pad "2" thru_hole oval
+		(at 0 2.54)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "099f4802-c9aa-465b-a562-c9943fde72d5")
+	)
+	(pad "3" thru_hole oval
+		(at 0 5.08)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a168b11b-c7a0-46ee-9f32-ce23a7e4b287")
+	)
+	(pad "4" thru_hole oval
+		(at 0 7.62)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a3be357c-1efd-491f-959a-afd37a0f817e")
+	)
+	(pad "5" thru_hole oval
+		(at 7.62 7.62)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "41edf1d9-9053-434a-92f9-4b0a358bf830")
+	)
+	(pad "6" thru_hole oval
+		(at 7.62 5.08)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d941beaa-06f1-4aa7-a532-ee1a40a01786")
+	)
+	(pad "7" thru_hole oval
+		(at 7.62 2.54)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e68c23b7-dd7c-457c-a542-42ea53ad85cb")
+	)
+	(pad "8" thru_hole oval
+		(at 7.62 0)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d154ed03-eed5-44e7-ae43-c85fe993f7db")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-8_W7.62mm.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

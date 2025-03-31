@@ -1,0 +1,340 @@
+(footprint "SOT230P700X180-4N"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "MIC79050-4.2YS")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "29e1f5af-30ab-4deb-9022-0117ded65290")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "AZ1117"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "be3dc40c-5dc8-4379-b02c-520dd36f9e7c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" "MyFootprints:SOT230P700X180-4N"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "53108c0d-3b98-441d-acd2-49d6ffdac896")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA25/1776204.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e67b1a52-d6b2-4184-b582-2d4ee112f905")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "1.35A 3.3V LDO Reg. Current Limit SOT223 DiodesZetex AZ1117CH-3.3TRG1, LDO Voltage Regulator, 0.8A, 3.3 V +/-1%, maximum of 15 Vin, 3-Pin SOT-223"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6a41831e-a7ca-4b74-8a1c-cb068858d2ae")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "1.8"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5242e048-4a94-4f9f-9406-4a7e6eae5897")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Diodes Inc."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ea21694-3b44-4218-ac94-95b401b1819b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "AZ1117CH-3.3TRG1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0865812b-0fee-4c28-90b8-be5cfb21fb0e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "621-AZ1117CH-3.3TRG1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6476aaf3-0073-4ec7-bc92-3391fb516017")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AZ1117CH-33TRG1?qs=FKu9oBikfSm7ntaG6olPSQ%3D%3D"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "209eec07-8309-44b2-ac4d-e4847c2ea92c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9a2acb10-a372-42b2-9b97-f80adf745456")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DESCRIPTION" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a7b325b6-e63a-4c21-a2a4-0155245cf86c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -4.025 -3.125)
+		(end -2.275 -3.125)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f423ab5d-f23a-4414-bc6b-9bc93e427b91")
+	)
+	(fp_line
+		(start -1.75 -3.25)
+		(end 1.75 -3.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5fa9613c-50d5-4960-8ea8-546acdf9f908")
+	)
+	(fp_line
+		(start -1.75 3.25)
+		(end -1.75 -3.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "54e8aea3-0c2c-4394-89d5-5265339b13b2")
+	)
+	(fp_line
+		(start 1.75 -3.25)
+		(end 1.75 3.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "18418b94-6bf7-488b-9492-fef304ba1131")
+	)
+	(fp_line
+		(start 1.75 3.25)
+		(end -1.75 3.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "408d64d2-d360-4c47-bcdc-d340e4b6b51d")
+	)
+	(fp_line
+		(start -4.275 -3.6)
+		(end 4.275 -3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "41823320-0aea-4b55-b2f2-22e30b0a6b91")
+	)
+	(fp_line
+		(start -4.275 3.6)
+		(end -4.275 -3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f69e4302-4f08-474b-99a2-fa640848bb15")
+	)
+	(fp_line
+		(start 4.275 -3.6)
+		(end 4.275 3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e6645447-e1b5-41a8-9b46-24581b5eee73")
+	)
+	(fp_line
+		(start 4.275 3.6)
+		(end -4.275 3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a5533769-6cc4-4ae3-bef1-86c0ef04add1")
+	)
+	(fp_line
+		(start -1.75 -3.25)
+		(end 1.75 -3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5facde65-280b-4a79-afb1-bff43539e060")
+	)
+	(fp_line
+		(start -1.75 -0.95)
+		(end 0.55 -3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "efc0b040-b41c-4d33-b79b-7d6cbd636b24")
+	)
+	(fp_line
+		(start -1.75 3.25)
+		(end -1.75 -3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "992d68a5-5c76-452d-b4ab-343c5390855e")
+	)
+	(fp_line
+		(start 1.75 -3.25)
+		(end 1.75 3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e66e03b8-f474-4e20-bc06-b9846f3ee33b")
+	)
+	(fp_line
+		(start 1.75 3.25)
+		(end -1.75 3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b1d7b4d6-911c-4478-a33c-608829e03fd9")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "ab8273c6-fe3e-4c2e-9394-ad681f0a6e39")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.15 -2.3 90)
+		(size 0.95 1.75)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "cf889759-e76d-4f0d-9823-2cbb30eb9f66")
+	)
+	(pad "2" smd rect
+		(at -3.15 0 90)
+		(size 0.95 1.75)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "dec50575-fd19-4a89-804a-646d2a10f597")
+	)
+	(pad "3" smd rect
+		(at -3.15 2.3 90)
+		(size 0.95 1.75)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "3b92906c-9ca7-49e9-8538-c848202f535a")
+	)
+	(pad "4" smd rect
+		(at 3.15 0)
+		(size 1.75 3.25)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6051d9bf-2871-4c6d-96ee-ce8539bceb7f")
+	)
+	(model "${MYKICAD}/LibraryLoader files/SamacSys_Parts.3dshapes/MIC79050-4.2YS.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

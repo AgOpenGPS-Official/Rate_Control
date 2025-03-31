@@ -1,0 +1,291 @@
+(footprint "SOIC127P600X175-8N"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC]")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "6f538eec-c353-4dde-86cb-04ed350b8bcc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "MCP6002-xP"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a02a1ed1-9058-4b00-8d9e-5b2ec887df5d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" "MyFootprints:SOIC127P600X175-8N"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db1bdf5a-c18f-4774-9dde-3aff2c99ff0b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dddd041a-5eb1-449a-9951-37d923bd6280")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "1MHz, Low-Power Op Amp, DIP-8"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b014a851-73e6-4cf1-a058-20a654c3b52f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DESCRIPTION" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8fbcdd6f-726f-457c-8890-53a78c7b30c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.45 -2.58)
+		(end -1.95 -2.58)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8124ff02-2dd5-48aa-b026-a38b00ed5484")
+	)
+	(fp_line
+		(start -1.6 -2.45)
+		(end 1.6 -2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8da90660-2480-4a08-8c8e-40ad50ee4478")
+	)
+	(fp_line
+		(start -1.6 2.45)
+		(end -1.6 -2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "183252dc-14e1-406d-a89a-4e2cb28bd542")
+	)
+	(fp_line
+		(start 1.6 -2.45)
+		(end 1.6 2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "90f8a385-d1ce-4cbf-b886-47aba59fe685")
+	)
+	(fp_line
+		(start 1.6 2.45)
+		(end -1.6 2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c6c1801c-2e59-4a53-a1ea-887990d36341")
+	)
+	(fp_line
+		(start -3.7 -2.7)
+		(end 3.7 -2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9460c1cf-561d-45f6-b703-1f7662de1d01")
+	)
+	(fp_line
+		(start -3.7 2.7)
+		(end -3.7 -2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d4d0f6d1-8041-486a-8403-ed3bd4613dc5")
+	)
+	(fp_line
+		(start 3.7 -2.7)
+		(end 3.7 2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "dfc65deb-d2b3-441f-8705-96443bcf90a1")
+	)
+	(fp_line
+		(start 3.7 2.7)
+		(end -3.7 2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "71b8dce1-1a63-4b10-9417-fc2205d78c88")
+	)
+	(fp_line
+		(start -1.95 -2.45)
+		(end 1.95 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "65847555-ec85-4e84-9c23-659619795e88")
+	)
+	(fp_line
+		(start -1.95 -1.18)
+		(end -0.68 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1f30c5f6-3395-4780-832a-8d7fffd108ee")
+	)
+	(fp_line
+		(start -1.95 2.45)
+		(end -1.95 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4690f210-a3ef-4776-9f59-1e8a6e3f8eba")
+	)
+	(fp_line
+		(start 1.95 -2.45)
+		(end 1.95 2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "eaf09991-8e77-4272-996e-7f81a5e14270")
+	)
+	(fp_line
+		(start 1.95 2.45)
+		(end -1.95 2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2fa4db4c-fa99-4781-8e73-b48e62cd7895")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9e594f1f-2787-48e3-908f-43538316f47c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.7 -1.905 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "2152295e-5e44-425c-b28c-17c2e8062025")
+	)
+	(pad "2" smd rect
+		(at -2.7 -0.635 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "27cf2694-fe49-44b9-b92a-a411f93bc05a")
+	)
+	(pad "3" smd rect
+		(at -2.7 0.635 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "17c89392-5b92-488a-851d-3db9d6009ae9")
+	)
+	(pad "4" smd rect
+		(at -2.7 1.905 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "99a8ea36-d6ed-4e57-9bc4-5976def8e86c")
+	)
+	(pad "5" smd rect
+		(at 2.7 1.905 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "0fe84ba2-a37a-456f-8a70-4673b076a314")
+	)
+	(pad "6" smd rect
+		(at 2.7 0.635 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6701703f-627c-4fdc-844e-3a3dd68eb2b9")
+	)
+	(pad "7" smd rect
+		(at 2.7 -0.635 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "0e6df85e-5912-40f2-ad1a-d3d7f47a041e")
+	)
+	(pad "8" smd rect
+		(at 2.7 -1.905 90)
+		(size 0.65 1.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6138bf60-60c1-408a-bf4a-4ccda25e8439")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
