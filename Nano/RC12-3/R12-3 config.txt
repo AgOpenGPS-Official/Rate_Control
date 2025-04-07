@@ -1,0 +1,40 @@
+7:41 AM 3/31/2025
+
+Module ID	0
+Sensor Count	2
+Wifi Port	-
+Relay Control	4	MCP23017	0x21
+Invert Relays
+Invert Flow
+No Ads1115
+
+Flow1		3
+Flow2		2
+Dir1		4
+Dir2		6
+PWM1		5
+PWM2		9
+Work Pin	15
+Pressure	14
+
+Relay1		0	
+Relay2		15
+Relay3		1
+Relay4		14
+Relay5		2
+Relay6		13
+Relay7		3
+Relay8		12
+
+Relay9		4
+Relay10		11
+Relay11		5
+Relay12		10
+Relay13		6
+Relay14		9
+Relay15		7
+Relay16		8
+
+no wifi
+
+3 wire valves

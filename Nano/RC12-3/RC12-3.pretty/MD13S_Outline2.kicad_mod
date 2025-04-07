@@ -1,0 +1,147 @@
+(footprint "MD13S_Outline2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "13Amp DC Motor Driver (MD13S)<br><br><br>Created by: Wai Weng")
+	(property "Reference" "REF**"
+		(at 1.905 -35.052 0)
+		(layer "F.SilkS")
+		(uuid "35b79ff7-61ba-406b-a92c-9c7f0af1921b")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.015)
+			)
+		)
+	)
+	(property "Value" "MDD10A"
+		(at 7.7216 -59.4868 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "63764389-c679-4474-8448-fb8cac134fa9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9d7b6b8c-5181-401a-a801-275d194bf094")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "37a2acea-502f-44fa-83f5-25c419e60c13")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start 0 -34.12)
+		(end 61.68 -34.12)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7c257fec-50d9-4a3a-8196-adb1fbaca944")
+	)
+	(fp_line
+		(start 0 0)
+		(end 0 -34.12)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6dc8743e-bd04-4ff3-a95f-bbc4222720a5")
+	)
+	(fp_line
+		(start 0 0)
+		(end 61.68 0)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "57093604-83a1-4c46-b889-dbcafadeabb2")
+	)
+	(fp_line
+		(start 61.68 0)
+		(end 61.68 -34.12)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5959a9c7-5e26-4b89-931b-572ccf6ab153")
+	)
+	(fp_text user "MD13S"
+		(at 3.2004 -28.4734 0)
+		(layer "F.SilkS")
+		(uuid "4100fb54-54ad-4bcd-9e55-9ff74896d7b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "MDD3A"
+		(at 7.19328 -22.10308 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "6741be12-f80d-49e8-91dc-6951fa11e463")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at 2.88 -31.06)
+		(size 3.2 3.2)
+		(drill 3.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "f54aa1ab-884b-4add-8e6e-8b3d5285d3c4")
+	)
+	(pad "" np_thru_hole circle
+		(at 2.88 -3.06)
+		(size 3.2 3.2)
+		(drill 3.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "9d1e12b9-79eb-4068-aa03-e7b0058c478b")
+	)
+	(pad "" np_thru_hole circle
+		(at 58.88 -31.06)
+		(size 3.2 3.2)
+		(drill 3.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "ac4c648a-76db-4352-b66a-1bfafbe4f117")
+	)
+	(pad "" np_thru_hole circle
+		(at 58.88 -3.06)
+		(size 3.2 3.2)
+		(drill 3.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "bca4abc7-0055-48a2-9a93-7bceb03505db")
+	)
+	(embedded_fonts no)
+)

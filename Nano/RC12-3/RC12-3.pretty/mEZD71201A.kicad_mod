@@ -1,0 +1,162 @@
+(footprint "mEZD71201A"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 5.4864 -3.2004 180)
+		(layer "F.SilkS")
+		(uuid "62b0bc7e-c69e-4270-a27b-454161c17d0c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "mEZD71201A"
+		(at 5.1054 -1.4478 180)
+		(layer "F.SilkS")
+		(uuid "208882d1-ae25-4437-b7a2-2f04fc81adb8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.monolithicpower.com/en/documentview/productdocument/index/doc_url/L20vZS9tZXpkNzEyMDFhX3IxLjZfMS5wZGY/prod_id/NTUy/"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e21db32f-7dc6-410b-8e3e-65a1f339fcab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "97f295b2-2914-4393-bf12-9fb1516568ee")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start 0 0)
+		(end 0 10)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "23bebb47-fb52-431b-b77a-5fe27c557a79")
+	)
+	(fp_line
+		(start 0 0)
+		(end 10.2 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c46123ab-a91f-4cef-8d2d-72dc30e17648")
+	)
+	(fp_line
+		(start 0 10)
+		(end 10.2 10)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5d526c15-8632-4eae-aa4e-496363630e89")
+	)
+	(fp_line
+		(start 10.2 0)
+		(end 10.2 10)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "136861b6-c7af-4c34-a61f-213b076805c5")
+	)
+	(fp_text user "Vin"
+		(at 2.4384 6 270)
+		(layer "F.SilkS")
+		(uuid "7d5c01f6-a892-4d50-bb64-23fa0cf466e6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "Vout"
+		(at 7.5184 5.5 270)
+		(layer "F.SilkS")
+		(uuid "bebe5c19-03e8-46a2-b7f4-3d7f1fc97c5f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "GND"
+		(at 5.0038 5.595238 270)
+		(layer "F.SilkS")
+		(uuid "fac42f3a-6f41-495c-94cb-091eab8d5a8d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 2.3368 8.5 90)
+		(size 1.59 1.59)
+		(drill 0.89)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5e5ba006-d98d-45ca-8452-9ddfcc5decfc")
+	)
+	(pad "2" thru_hole circle
+		(at 4.8768 8.5 90)
+		(size 1.59 1.59)
+		(drill 0.89)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3b4414e1-db5c-4532-a2e8-79ee7ced8fbb")
+	)
+	(pad "3" thru_hole circle
+		(at 7.4168 8.5 90)
+		(size 1.59 1.59)
+		(drill 0.89)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a7f4d18d-b1d3-44cf-8a6e-2b1ff4c3a5bc")
+	)
+	(embedded_fonts no)
+	(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-220-3_Vertical.wrl"
+		(offset
+			(xyz 2.5 -8.5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
