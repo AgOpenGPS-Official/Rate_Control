@@ -1,12 +1,14 @@
-### [Nano RC12-2](Nano/RC12-2)
+### [Nano RC12-3](Nano/RC12-3)
 - uses a Nano (with ENC28J60 Ethernet shield) & an on-board mounted Cytron for rate control
-	- either (1) [MD13S](https://www.cytron.io/p-13amp-6v-30v-dc-motor-driver) for single rate control
- 	- or (1) [MD10C](https://www.cytron.io/c-motor-and-motor-driver/c-motor-driver/p-10amp-5v-30v-dc-motor-driver) for single rate control
+	- 1 or 2 [MD13S](https://www.cytron.io/p-13amp-6v-30v-dc-motor-driver) for rate control
 - self assembled through-hole board, least expensive
-- controls one rate
-- can be connected to a relay module with another small pcb
-- [OSHPARK](https://oshpark.com/shared_projects/UU8e90h9)
-![Nano-RC12 photo](Nano/RC12-2/RC12-2.jpg)
+- controls two rates
+- can be connected to a relay module with a 20 pin cable or dupont connectors
+- work switch
+- pressure switch
+- [OSHPARK]([https://oshpark.com/shared_projects/UU8e90h9](https://oshpark.com/shared_projects/fRBlR1Se)
+![RC12-3](https://github.com/user-attachments/assets/63630fa4-6896-430a-83e5-a736d1104b5a)
+
 
 #
 ### [Teensy 4.1 RC11-2](Teensy/RC11-2_PCB)
