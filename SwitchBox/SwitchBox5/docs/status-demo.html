@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cab Switchbox Status Demo</title>
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;background:#f5f6f7;color:#1f2933}
+    header{background:#263238;color:white;padding:14px 18px}
+    header a{color:white;text-decoration:none;border:1px solid rgba(255,255,255,.55);border-radius:4px;padding:6px 10px}
+    nav{margin-top:9px}
+    main{max-width:980px;margin:0 auto;padding:14px}
+    section{background:white;border:1px solid #d9dee3;border-radius:6px;margin:12px 0;padding:14px}
+    h1{font-size:22px;margin:0}
+    h2{font-size:18px;margin:12px 0 10px}
+    label{display:block;font-weight:bold;margin-top:10px}
+    input,select{font-size:16px;padding:7px;margin:3px;border:1px solid #b8c0c8;border-radius:4px}
+    input[type=number]{width:64px}
+    .status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:7px}
+    .input-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:7px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+    .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .tile{display:block;padding:6px 9px;border-radius:4px;background:#e8eef2;margin:2px}
+    .on{background:#b7f0c1}
+    .off{background:#f1c0c0}
+    .muted{color:#52616b;font-size:13px}
+    .mono{font-family:Consolas,monospace}
+    button{font-size:16px;padding:10px 16px;border:0;border-radius:4px;background:#1976d2;color:white}
+  </style>
+</head>
+<body>
+  <header><h1>Cab Switchbox Setup Demo</h1><nav><a href="#">Manual</a></nav></header>
+  <main>
+    <section>
+      <h2>Status</h2>
+      <div id="status"></div>
+    </section>
+
+    <form>
+      <section>
+        <h2>Network</h2>
+        <label>Ethernet IP</label>
+        <div class="row">
+          <input type="number" value="192"><input type="number" value="168"><input type="number" value="0"><input type="number" value="70">
+        </div>
+        <label>WiFi IP</label>
+        <div class="row">
+          <input type="number" value="192"><input type="number" value="168"><input type="number" value="0"><input type="number" value="71">
+        </div>
+        <label>Gateway</label>
+        <div class="row">
+          <input type="number" value="192"><input type="number" value="168"><input type="number" value="0"><input type="number" value="1">
+        </div>
+        <label>Subnet</label>
+        <div class="row">
+          <input type="number" value="255"><input type="number" value="255"><input type="number" value="255"><input type="number" value="0">
+        </div>
+        <label><input type="checkbox" checked> Also connect to existing WiFi network</label>
+        <label>Existing WiFi SSID</label>
+        <input maxlength="31" value="Tractor">
+        <label>Existing WiFi Password</label>
+        <input maxlength="31" value="111222333">
+        <label>Access Point Name</label>
+        <input maxlength="31" value="CabSwitchbox">
+        <label>Access Point Password <span class="muted">blank or 8+ chars</span></label>
+        <input maxlength="31" value="">
+      </section>
+
+      <section>
+        <h2>Inputs</h2>
+        <label><input type="checkbox"> Override section switches ON</label>
+        <label>Send period ms</label>
+        <input type="number" min="50" max="1000" value="100">
+        <label>Pulse length ms</label>
+        <input type="number" min="50" max="1000" value="250">
+        <div class="grid" id="inputConfig"></div>
+      </section>
+
+      <button type="button">Save and restart</button>
+    </form>
+  </main>
+  <script>
+    const pins = Array.from({length: 16}, (_, i) => 'IN' + i);
+    const demo = {
+      mcp: true,
+      ethernet: true,
+      wifiStation: false,
+      wifiRssi: 0,
+      rawA: 0x9A,
+      rawB: 0xFC,
+      packet: [106,127,73,3,0,56],
+      masterOn: false,
+      masterOff: false,
+      rateUp: true,
+      rateDown: false,
+      autoRate: true,
+      autoSection: false,
+      rate2: true,
+      work: false,
+      sectionsLo: 3,
+      sectionsHi: 0,
+      crc: 56,
+      inputs: [false,true,false,true,true,false,false,false,true,true,false,false,false,false,false,false],
+      actions: [
+        'Master On','Master Off','Rate up','Rate down','Manual rate override','Manual section override','Rate 2','Section 1',
+        'Section 2','Section 3','Section 4','Section 5','Section 6','Section 7','Section 8','Section 9'
+      ]
+    };
+
+    const actions = [
+      'Disabled','Master On','Master Off','Rate up','Rate down','Manual rate override','Manual section override','Rate 2',
+      'Work switch','Section 1','Section 2','Section 3','Section 4','Section 5','Section 6','Section 7',
+      'Section 8','Section 9','Section 10','Section 11','Section 12','Section 13','Section 14','Section 15','Section 16'
+    ];
+
+    function hx(v) {
+      return '0x' + Number(v).toString(16).toUpperCase().padStart(2, '0');
+    }
+
+    function bit(name, on) {
+      return '<span class="tile ' + (on ? 'on' : 'off') + '">' + name + '<br><span class="muted">' + (on ? 'ON' : 'off') + '</span></span>';
+    }
+
+    function render(j) {
+      let h = '<div class="status-grid">';
+      h += bit('Input board', j.mcp);
+      h += bit('Ethernet', j.ethernet);
+      h += bit('WiFi station', j.wifiStation);
+      h += '<span class="tile mono">Packet<br>' + j.packet.map(hx).join(' ') + '</span>';
+      h += '</div><h2>Decoded PGN32618</h2><div class="status-grid">';
+      h += bit('Master On', j.masterOn);
+      h += bit('Master Off', j.masterOff);
+      h += bit('Rate Up', j.rateUp);
+      h += bit('Rate Down', j.rateDown);
+      h += bit('Auto Rate', j.autoRate);
+      h += bit('Auto Section', j.autoSection);
+      h += bit('Rate 2', j.rate2);
+      h += bit('Work', j.work);
+      h += '<span class="tile mono">Sections Lo<br>' + hx(j.sectionsLo) + '</span>';
+      h += '<span class="tile mono">Sections Hi<br>' + hx(j.sectionsHi) + '</span>';
+      h += '<span class="tile mono">CRC<br>' + hx(j.crc) + '</span>';
+      h += '</div><h2>Inputs</h2><div class="input-grid">';
+      for (let i = 0; i < 16; i++) {
+        h += '<span class="tile ' + (j.inputs[i] ? 'on' : 'off') + '"><b>' + pins[i] + '</b> ' + (j.inputs[i] ? 'ON' : 'off') + '<br><span class="muted">' + j.actions[i] + '</span></span>';
+      }
+      h += '</div>';
+      document.getElementById('status').innerHTML = h;
+    }
+
+    function renderInputConfig(j) {
+      const root = document.getElementById('inputConfig');
+      root.innerHTML = pins.map((pin, i) => {
+        const opts = actions.map(a => '<option' + (a === j.actions[i] ? ' selected' : '') + '>' + a + '</option>').join('');
+        return '<label>' + pin + '<select>' + opts + '</select></label>';
+      }).join('');
+    }
+
+    render(demo);
+    renderInputConfig(demo);
+  </script>
+</body>
+</html>

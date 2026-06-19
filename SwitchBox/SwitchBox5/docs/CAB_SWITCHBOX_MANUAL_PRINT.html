@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cab Switchbox Manual</title>
+  <style>
+    @page { size: Letter; margin: 0.55in; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #1f2933;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.45;
+      background: white;
+    }
+    h1, h2, h3, h4 { color: #16313d; line-height: 1.15; page-break-after: avoid; }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30pt;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 24px 0 8px;
+      padding-top: 6px;
+      border-top: 2px solid #d7e3e8;
+      font-size: 17pt;
+    }
+    h3 { margin: 16px 0 6px; font-size: 13pt; }
+    p { margin: 7px 0; }
+    ul, ol { margin: 7px 0 10px 22px; padding: 0; }
+    li { margin: 3px 0; }
+    code {
+      padding: 1px 4px;
+      border-radius: 3px;
+      background: #edf3f5;
+      color: #14323f;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 9.3pt;
+    }
+    pre {
+      margin: 10px 0;
+      padding: 10px 12px;
+      border-left: 4px solid #27718e;
+      background: #f1f6f7;
+      page-break-inside: avoid;
+      white-space: pre-wrap;
+    }
+    pre code { padding: 0; background: transparent; }
+    .table-wrap { margin: 10px 0 14px; page-break-inside: avoid; }
+    table { width: 100%; border-collapse: collapse; font-size: 9.4pt; }
+    th, td { border: 1px solid #cbd7dc; padding: 6px 7px; vertical-align: top; }
+    th { background: #e6f0f3; color: #16313d; text-align: left; }
+    tr:nth-child(even) td { background: #f8fbfc; }
+    .screenshots { margin: 18px 0; }
+    figure {
+      margin: 12px 0 18px;
+      padding: 10px;
+      border: 1px solid #cbd7dc;
+      border-radius: 6px;
+      background: #f8fbfc;
+      page-break-inside: avoid;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      max-height: 7.2in;
+      object-fit: contain;
+      border: 1px solid #d8e1e5;
+      background: white;
+    }
+    figcaption { margin-top: 7px; color: #52616b; font-size: 9.1pt; }
+    h1 + p {
+      margin: 0 0 18px;
+      color: #52616b;
+      font-size: 11pt;
+    }
+    h1::after {
+      content: "ESP32 network switch input setup, wiring, and troubleshooting";
+      display: block;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-left: 5px solid #27718e;
+      background: #edf5f7;
+      color: #29434e;
+      font-size: 12pt;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+<h1 id="cab-switchbox-manual">Cab Switchbox Manual</h1>
+<p>Last updated: June 19, 2026</p>
+<p>Hardware shown in this manual: <strong>SwitchBox5-Terminals-PCB-01 (Rev 01)</strong>.</p>
+<h2 id="overview">Overview</h2>
+<p>The ESP32 Cab Switchbox is a network switch input module for the rate controller system. It reads up to 16 cab switch inputs, converts them into the switchbox packet used by the rate controller, and sends that packet over UDP by Ethernet and WiFi.</p>
+<p>The switchbox is intended for cab controls such as:</p>
+<ul>
+<li>Master on / master off</li>
+<li>Rate up / rate down</li>
+<li>Manual rate override</li>
+<li>Manual section override</li>
+<li>Rate 2</li>
+<li>Work switch</li>
+<li>Section switches 1 through 16</li>
+<li>Board-mounted alarm buzzer output</li>
+</ul>
+<p>The current firmware is in:</p>
+<pre><code>
+ESP32_Cab_Switchbox/ESP32_Cab_Switchbox.ino
+
+</code></pre>
+<h2 id="default-network-settings">Default Network Settings</h2>
+<p>The switchbox starts its own WiFi access point and can also use Ethernet.</p>
+<p>Default settings:</p>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Default</th></tr></thead><tbody><tr><td>Access point name</td><td><code>CabSwitchbox-XXXX</code></td></tr><tr><td>Access point password</td><td>blank / open network</td></tr><tr><td>WiFi setup IP</td><td><code>192.168.0.71</code></td></tr><tr><td>Ethernet IP</td><td><code>192.168.0.70</code></td></tr><tr><td>Gateway</td><td><code>192.168.0.1</code></td></tr><tr><td>Subnet</td><td><code>255.255.255.0</code></td></tr><tr><td>Web page port</td><td><code>80</code></td></tr><tr><td>mDNS name</td><td><code>cabswitchbox.local</code></td></tr><tr><td>UDP send port</td><td><code>29999</code></td></tr><tr><td>Local UDP port</td><td><code>28888</code></td></tr></tbody></table></div>
+<h2 id="additional-parts-needed">Additional Parts Needed</h2>
+<p>The SwitchBox5 Rev 01 terminal PCB needs these additional parts installed before use:</p>
+<div class="table-wrap"><table><thead><tr><th>Part</th><th>Notes</th></tr></thead><tbody><tr><td>2 amp mini fuse</td><td>Installs in the fuse holder. Protects the input/switch-feed circuit.</td></tr><tr><td>ESP32-DEVKitC-VE</td><td>Main controller board. Install in the ESP32 header sockets.</td></tr><tr><td>W5500 Ethernet Module</td><td>Ethernet network module. Install in the W5500 module header.</td></tr><tr><td>Hammond <code>E1555K2GY</code> enclosure</td><td>Polycarbonate NEMA 4X enclosure, 6.3 x 3.5 x 3.5 inches. The SwitchBox5 PCB fits this enclosure.</td></tr></tbody></table></div>
+<h2 id="enclosure">Enclosure</h2>
+<p>The SwitchBox5 PCB fits the <strong>Hammond Manufacturing E1555K2GY</strong></p>
+<p>polycarbonate enclosure:</p>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Specification</th></tr></thead><tbody><tr><td>Manufacturer</td><td>Hammond Manufacturing</td></tr><tr><td>Part number</td><td><code>E1555K2GY</code></td></tr><tr><td>Outside size</td><td>6.3 x 3.5 x 3.5 inches</td></tr><tr><td>Protection rating</td><td>NEMA 4X</td></tr><tr><td>Material</td><td>Polycarbonate</td></tr></tbody></table></div>
+<p>Plan cable glands, Ethernet access, switch wiring, and board mounting before</p>
+<p>drilling the enclosure. Keep the lid sealing surface clear of wiring and</p>
+<p>hardware so the NEMA 4X seal is maintained.</p>
+
+      <section class="screenshots">
+        <h2>Board Power And Switch Feed</h2>
+        <figure>
+          <img src="manual-assets/BoardPNG_R01.png" alt="SwitchBox5 Rev 01 board terminal layout">
+          <figcaption>SwitchBox5-Terminals-PCB-01 (Rev 01). Connect board power to 12Vin and GND. Use the fused 12V terminals through switches to power the IN0-IN15 inputs.</figcaption>
+        </figure>
+      </section>
+    <h2 id="power-and-switch-feed-terminals">Power And Switch Feed Terminals</h2>
+<p>Power the board from the input power terminals:</p>
+<p>The upper six-position terminal block on Rev 01 is ordered left to right:</p>
+<div class="table-wrap"><table><thead><tr><th>Position</th><th>Terminal</th><th>Use</th></tr></thead><tbody><tr><td>1</td><td><code>12Vin</code></td><td>Connect to supply +12-24 VDC.</td></tr><tr><td>2</td><td><code>GND</code></td><td>Connect to supply negative / ground.</td></tr><tr><td>3</td><td><code>12V</code></td><td>Fused +12-24 VDC output for switch feeds.</td></tr><tr><td>4</td><td><code>12V</code></td><td>Fused +12-24 VDC output for switch feeds.</td></tr><tr><td>5</td><td><code>GND</code></td><td>Ground return terminal.</td></tr><tr><td>6</td><td><code>GND</code></td><td>Ground return terminal.</td></tr></tbody></table></div>
+<p>The <code>12V</code> terminals are fused outputs from the board input power. Use these fused <code>12V</code> terminals to feed the operator switches, then return the switched voltage to the desired <code>INx</code> input.</p>
+<p>Typical wiring:</p>
+<pre><code>
+Supply +12-24 VDC -------- 12Vin
+
+Supply negative ---------- GND
+
+
+
+Fused 12V terminal ------- switch ------- INx
+
+</code></pre>
+<p>The Rev 01 input power fuse is 2 amps. The fused <code>12V</code> terminals are intended for feeding switch inputs, not for powering heavy loads.</p>
+<p>The PCB electronics and switch inputs can operate from <strong>12-24 VDC</strong>. However,</p>
+<p>the buzzer is a **12 V board-mounted component connected directly to input</p>
+<p>power**. The buzzer will only operate correctly when the board is powered from</p>
+<p>12 VDC. Do not expect buzzer operation with a 24 V supply, and do not apply</p>
+<p>24 V to the installed 12 V buzzer.</p>
+<h2 id="rev-01-terminal-layout">Rev 01 Terminal Layout</h2>
+<p>The four six-position terminal blocks are ordered as follows:</p>
+<div class="table-wrap"><table><thead><tr><th>Block</th><th>Left-to-right terminal order</th></tr></thead><tbody><tr><td>Power</td><td><code>12Vin</code>, <code>GND</code>, <code>12V</code>, <code>12V</code>, <code>GND</code>, <code>GND</code></td></tr><tr><td>Inputs 0-5</td><td><code>IN0</code>, <code>IN1</code>, <code>IN2</code>, <code>IN3</code>, <code>IN4</code>, <code>IN5</code></td></tr><tr><td>Inputs 6-11</td><td><code>IN6</code>, <code>IN7</code>, <code>IN8</code>, <code>IN9</code>, <code>IN10</code>, <code>IN11</code></td></tr><tr><td>Inputs 12-15 / switch feed</td><td><code>IN12</code>, <code>IN13</code>, <code>IN14</code>, <code>IN15</code>, <code>12V</code>, <code>12V</code></td></tr></tbody></table></div>
+<p>The Rev 01 silkscreen also identifies the default functions below the input</p>
+<p>terminals: master on/off, rate increase/decrease, manual rate, manual section,</p>
+<p>Rate 2, and sections S1 through S9.</p>
+<h2 id="accessing-the-setup-page">Accessing The Setup Page</h2>
+<h3 id="using-the-switchbox-wifi-access-point">Using The Switchbox WiFi Access Point</h3>
+<ol>
+<li>Power the Cab Switchbox.</li>
+<li>On a phone, tablet, or laptop, connect to the WiFi network named <code>CabSwitchbox</code>.</li>
+<li>Open a browser and go to:</li>
+</ol>
+<pre><code>
+http://192.168.0.71/
+
+</code></pre>
+<p>If mDNS is working on the device you are using, this may also work:</p>
+<pre><code>
+http://cabswitchbox.local/
+
+</code></pre>
+<h3 id="using-ethernet">Using Ethernet</h3>
+<ol>
+<li>Connect the switchbox Ethernet port to the same network as the rate controller / setup computer.</li>
+<li>Make sure the computer is on the same subnet as the switchbox.</li>
+<li>Open:</li>
+</ol>
+<pre><code>
+http://192.168.0.70/
+
+</code></pre>
+<p>If needed, first connect by WiFi and change the Ethernet IP address to match the network you are using.</p>
+
+      <section class="screenshots">
+        <h2>Setup Page Screenshots</h2>
+        <figure>
+          <img src="manual-assets/cab-switchbox-desktop.png" alt="Cab Switchbox setup page desktop screenshot">
+          <figcaption>Desktop setup page with live status, decoded packet, network settings, and input configuration.</figcaption>
+        </figure>
+        <figure>
+          <img src="manual-assets/cab-switchbox-mobile.png" alt="Cab Switchbox setup page mobile screenshot">
+          <figcaption>Mobile layout used when configuring the switchbox from a phone or tablet in the cab.</figcaption>
+        </figure>
+      </section>
+    <h2 id="setup-page-sections">Setup Page Sections</h2>
+<p>The setup page has a live status area and a configuration form. After changing settings, click <strong>Save and restart</strong>. The switchbox saves the settings to EEPROM and restarts.</p>
+<h3 id="status">Status</h3>
+<p>The status area shows:</p>
+<div class="table-wrap"><table><thead><tr><th>Status item</th><th>Meaning</th></tr></thead><tbody><tr><td>Input board</td><td>The switch input board is detected and ready.</td></tr><tr><td>Ethernet</td><td>Ethernet hardware is detected and the link is up.</td></tr><tr><td>WiFi station</td><td>The switchbox is connected to an existing WiFi network.</td></tr><tr><td>Buzzer</td><td>The GPIO27 buzzer output is currently on.</td></tr><tr><td>Alarm packet</td><td>A recent alarm packet has been received from Rate Controller.</td></tr><tr><td>Alarm active</td><td>Rate Controller is requesting the cab buzzer.</td></tr><tr><td>Packet</td><td>The six-byte packet being sent to the rate controller.</td></tr><tr><td>Decoded PGN32618</td><td>Human-readable state of the outgoing switchbox packet.</td></tr><tr><td>Inputs</td><td>Live state and assigned action for each input <code>IN0</code> through <code>IN15</code>.</td></tr></tbody></table></div>
+<h3 id="network-settings">Network Settings</h3>
+<div class="table-wrap"><table><thead><tr><th>Setting</th><th>Description</th></tr></thead><tbody><tr><td>Ethernet IP</td><td>Static IP used by the Ethernet interface.</td></tr><tr><td>WiFi IP</td><td>IP used by the switchbox access point.</td></tr><tr><td>Gateway</td><td>Gateway used for Ethernet and station WiFi.</td></tr><tr><td>Subnet</td><td>Subnet mask.</td></tr><tr><td>Also connect to existing WiFi network</td><td>Enables WiFi station mode in addition to the switchbox access point.</td></tr><tr><td>Existing WiFi SSID</td><td>Name of the WiFi network the switchbox should join.</td></tr><tr><td>Existing WiFi Password</td><td>Password for the existing WiFi network.</td></tr><tr><td>Access Point Name</td><td>Name of the WiFi network created by the switchbox.</td></tr><tr><td>Access Point Password</td><td>Password for the switchbox access point. Leave blank for open WiFi, or use 8 or more characters.</td></tr></tbody></table></div>
+<h3 id="input-settings">Input Settings</h3>
+<div class="table-wrap"><table><thead><tr><th>Setting</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>Override section switches ON</td><td>Off</td><td>Forces mapped section switch inputs ON without jumpers. Use this when section switches are not installed.</td></tr><tr><td>Send period ms</td><td><code>100</code></td><td>How often the switchbox packet is sent. Valid range is 50 to 1000 ms.</td></tr><tr><td>Pulse length ms</td><td><code>250</code></td><td>Length of master and rate pulses. Valid range is 50 to 1000 ms.</td></tr><tr><td>IN0-IN15 action</td><td>See table below</td><td>Assigns what each physical input does.</td></tr></tbody></table></div>
+<h3 id="alarm-buzzer-settings">Alarm Buzzer Settings</h3>
+<div class="table-wrap"><table><thead><tr><th>Setting</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>Buzzer level</td><td><code>Reduced</code></td><td>Select <code>Off</code>, <code>Reduced</code>, or <code>Full</code> for the board buzzer.</td></tr><tr><td>Test buzzer</td><td>n/a</td><td>Sounds the buzzer for two seconds without changing saved settings.</td></tr></tbody></table></div>
+<h2 id="default-input-map">Default Input Map</h2>
+<p>Factory/default input assignments:</p>
+<div class="table-wrap"><table><thead><tr><th>Input</th><th>Default action</th><th>Typical wiring</th></tr></thead><tbody><tr><td>IN0</td><td>Master on</td><td>Momentary switch feeding +12-24 VDC to IN0</td></tr><tr><td>IN1</td><td>Master off</td><td>Momentary switch feeding +12-24 VDC to IN1</td></tr><tr><td>IN2</td><td>Rate up</td><td>Momentary switch feeding +12-24 VDC to IN2</td></tr><tr><td>IN3</td><td>Rate down</td><td>Momentary switch feeding +12-24 VDC to IN3</td></tr><tr><td>IN4</td><td>Manual rate override</td><td>Toggle switch feeding +12-24 VDC to IN4</td></tr><tr><td>IN5</td><td>Manual section override</td><td>Toggle switch feeding +12-24 VDC to IN5</td></tr><tr><td>IN6</td><td>Rate 2</td><td>Toggle switch feeding +12-24 VDC to IN6</td></tr><tr><td>IN7</td><td>Section 1</td><td>Toggle switch feeding +12-24 VDC to IN7</td></tr><tr><td>IN8</td><td>Section 2</td><td>Toggle switch feeding +12-24 VDC to IN8</td></tr><tr><td>IN9</td><td>Section 3</td><td>Toggle switch feeding +12-24 VDC to IN9</td></tr><tr><td>IN10</td><td>Section 4</td><td>Toggle switch feeding +12-24 VDC to IN10</td></tr><tr><td>IN11</td><td>Section 5</td><td>Toggle switch feeding +12-24 VDC to IN11</td></tr><tr><td>IN12</td><td>Section 6</td><td>Toggle switch feeding +12-24 VDC to IN12</td></tr><tr><td>IN13</td><td>Section 7</td><td>Toggle switch feeding +12-24 VDC to IN13</td></tr><tr><td>IN14</td><td>Section 8</td><td>Toggle switch feeding +12-24 VDC to IN14</td></tr><tr><td>IN15</td><td>Section 9</td><td>Toggle switch feeding +12-24 VDC to IN15</td></tr></tbody></table></div>
+<p>Any input can be reassigned from the web page.</p>
+<p>Available actions:</p>
+<div class="table-wrap"><table><thead><tr><th>Action</th><th>Behavior</th></tr></thead><tbody><tr><td>Disabled</td><td>Input is ignored.</td></tr><tr><td>Master on</td><td>Momentary master on pulse.</td></tr><tr><td>Master off</td><td>Momentary master off pulse.</td></tr><tr><td>Rate up</td><td>Rate up command.</td></tr><tr><td>Rate down</td><td>Rate down command.</td></tr><tr><td>Work switch</td><td>Implement up/down permissive. ON allows application; OFF forces master/sections off when Work Switch is enabled in the Rate Controller app.</td></tr><tr><td>Manual section override</td><td>When active, requests manual section override.</td></tr><tr><td>Manual rate override</td><td>When active, requests manual rate override.</td></tr><tr><td>Rate 2</td><td>Sends Rate 2 while active.</td></tr><tr><td>Master</td><td>Maintained master switch. ON sends master on; OFF sends master off.</td></tr><tr><td>Section 1-16</td><td>Sends the matching section switch bit while active.</td></tr></tbody></table></div>
+<h2 id="wiring-inputs">Wiring Inputs</h2>
+<p>The switchbox5 board inputs are made for 12-24 VDC switch signals. Each switch input turns ON when +12-24 VDC is applied to that <code>INx</code> terminal.</p>
+<p>Input behavior:</p>
+<ul>
+<li>An open / unpowered input reads OFF.</li>
+<li>Applying +12-24 VDC to an <code>INx</code> terminal reads ON.</li>
+<li>The 12-24 VDC supply negative must be connected to the switchbox input <code>GND</code>.</li>
+</ul>
+<p>Typical switchbox5 field wiring:</p>
+<pre><code>
+12Vin ---------------- supply +12-24 VDC
+
+GND ------------------- supply negative
+
+12V fused output ------ switch ------ INx
+
+</code></pre>
+<p>For a momentary button, use a normally-open button between a fused <code>12V</code> terminal and the assigned <code>INx</code> terminal.</p>
+<p>For a toggle switch, use a maintained switch between a fused <code>12V</code> terminal and the assigned <code>INx</code> terminal.</p>
+<p>Use the <code>IN0</code> through <code>IN15</code> input terminals on the switchbox board. Do not connect field wiring to internal board components.</p>
+<h2 id="wiring-the-master-and-rate-controls">Wiring The Master And Rate Controls</h2>
+<p>A simple installation without section switches can use only:</p>
+<div class="table-wrap"><table><thead><tr><th>Function</th><th>Default input</th></tr></thead><tbody><tr><td>Master on</td><td>IN0</td></tr><tr><td>Master off</td><td>IN1</td></tr><tr><td>Rate up</td><td>IN2</td></tr><tr><td>Rate down</td><td>IN3</td></tr><tr><td>Manual rate override</td><td>IN4</td></tr><tr><td>Manual section override</td><td>IN5</td></tr><tr><td>Rate 2</td><td>IN6</td></tr></tbody></table></div>
+<p>Wire each installed switch so it feeds fused +12-24 VDC from a <code>12V</code> terminal to the assigned <code>INx</code> terminal when the switch is ON or pressed.</p>
+<p>If section switches are not installed, enable <strong>Override section switches ON</strong>. This makes all inputs assigned to <code>Section 1</code> through <code>Section 16</code> behave as ON in the outgoing packet, so the system does not require jumper wires on the unused section switch inputs.</p>
+<h2 id="wiring-section-switches">Wiring Section Switches</h2>
+<p>For normal section switch operation:</p>
+<ol>
+<li>Leave <strong>Override section switches ON</strong> unchecked.</li>
+<li>Wire each section toggle so it feeds fused +12-24 VDC from a <code>12V</code> terminal to its assigned <code>INx</code> terminal when ON.</li>
+</ol>
+<p>Default section switch wiring:</p>
+<div class="table-wrap"><table><thead><tr><th>Section</th><th>Default input</th></tr></thead><tbody><tr><td>Section 1</td><td>IN7</td></tr><tr><td>Section 2</td><td>IN8</td></tr><tr><td>Section 3</td><td>IN9</td></tr><tr><td>Section 4</td><td>IN10</td></tr><tr><td>Section 5</td><td>IN11</td></tr><tr><td>Section 6</td><td>IN12</td></tr><tr><td>Section 7</td><td>IN13</td></tr><tr><td>Section 8</td><td>IN14</td></tr><tr><td>Section 9</td><td>IN15</td></tr></tbody></table></div>
+<p>Sections 10 through 16 can be used by reassigning inputs from the setup page. The board has 16 total inputs, so using more section switches may require disabling or moving other functions.</p>
+<h2 id="override-section-switches-on">Override Section Switches ON</h2>
+<p>Use <strong>Override section switches ON</strong> when the operator does not have physical section switches installed.</p>
+<p>When enabled:</p>
+<ul>
+<li>Inputs assigned to <code>Section 1</code> through <code>Section 16</code> are forced ON in the switchbox packet.</li>
+<li>Master, rate, and override inputs still use the real physical switch state.</li>
+<li>No section input jumpers are required.</li>
+</ul>
+<p>When disabled:</p>
+<ul>
+<li>Section inputs behave normally.</li>
+<li>An open / unpowered section input is OFF.</li>
+</ul>
+<h2 id="work-switch">Work Switch</h2>
+<p>The <code>Work switch</code> input is normally used for an implement lift switch, height switch, whisker switch, pressure switch, or other signal that tells the rate controller whether the implement is in work.</p>
+<p>Typical use:</p>
+<pre><code>
+Implement down / in work = +12-24 VDC to Work switch input = ON
+
+Implement up / out of work = input unpowered = OFF
+
+</code></pre>
+<p>When Work Switch is enabled in the Rate Controller app, it acts as a master permissive:</p>
+<ul>
+<li>Work switch ON allows the rate controller to apply when the master and section conditions are also satisfied.</li>
+<li>Work switch OFF forces master/sections off.</li>
+<li>It does not replace Auto Rate or Auto Section. Those are separate switchbox functions.</li>
+</ul>
+<p>In the Rate Controller app, Work Switch must be enabled in the switch settings. If it is not enabled there, the app ignores the work switch signal and behaves as if work is always allowed.</p>
+<h2 id="alarm-buzzer-output">Alarm Buzzer Output</h2>
+<p>The active 12 V alarm buzzer is installed directly on the SwitchBox5 PCB. It is</p>
+<p>not an additional external part. The buzzer is driven from ESP32 Dev Board pin</p>
+<p><code>GPIO27</code> through the onboard low-side MOSFET.</p>
+<p>The buzzer receives board input voltage directly. Therefore:</p>
+<ul>
+<li>With a 12 VDC board supply, the onboard buzzer operates normally.</li>
+<li>The remainder of the switchbox can operate from 12-24 VDC.</li>
+<li>With a 24 VDC board supply, the installed 12 V buzzer must not be operated.</li>
+</ul>
+<p>GPIO27 does not need an external pull-up. The 100k pulldown keeps the buzzer off while the ESP32 is booting or reset.</p>
+<h2 id="packet-behavior">Packet Behavior</h2>
+<p>The switchbox sends a six-byte packet to UDP port <code>29999</code>.</p>
+<p>Packet layout:</p>
+<div class="table-wrap"><table><thead><tr><th>Byte</th><th>Meaning</th></tr></thead><tbody><tr><td>0</td><td>Header byte <code>106</code></td></tr><tr><td>1</td><td>Header byte <code>127</code></td></tr><tr><td>2</td><td>Status bits</td></tr><tr><td>3</td><td>Section bits 1-8</td></tr><tr><td>4</td><td>Section bits 9-16</td></tr><tr><td>5</td><td>Checksum</td></tr></tbody></table></div>
+<p>Status byte bits:</p>
+<div class="table-wrap"><table><thead><tr><th>Bit</th><th>Meaning</th></tr></thead><tbody><tr><td>0</td><td>Rate 2</td></tr><tr><td>1</td><td>Master on</td></tr><tr><td>2</td><td>Master off</td></tr><tr><td>3</td><td>Rate up</td></tr><tr><td>4</td><td>Rate down</td></tr><tr><td>5</td><td>Auto section</td></tr><tr><td>6</td><td>Auto rate</td></tr><tr><td>7</td><td>Work switch</td></tr></tbody></table></div>
+<p>Section byte behavior:</p>
+<ul>
+<li>Byte 3 bit 0 = Section 1</li>
+<li>Byte 3 bit 7 = Section 8</li>
+<li>Byte 4 bit 0 = Section 9</li>
+<li>Byte 4 bit 7 = Section 16</li>
+</ul>
+<p>The checksum is the sum of bytes 0 through 4, stored in one byte.</p>
+<h2 id="recommended-first-setup">Recommended First Setup</h2>
+<ol>
+<li>Power the switchbox.</li>
+<li>Connect to WiFi network <code>CabSwitchbox</code>.</li>
+<li>Open <code>http://192.168.0.71/</code>.</li>
+<li>Confirm the status page shows <code>Input board</code> ON.</li>
+<li>If using Ethernet, set the Ethernet IP to match the rate controller network.</li>
+<li>If section switches are not installed, check <strong>Override section switches ON</strong>.</li>
+<li>Confirm each installed switch changes state in the Inputs status area.</li>
+<li>Click <strong>Save and restart</strong>.</li>
+<li>After restart, verify the rate controller responds to master and rate commands.</li>
+</ol>
+<h2 id="example-setups">Example Setups</h2>
+<h3 id="master-and-rate-only-no-section-switches">Master And Rate Only, No Section Switches</h3>
+<p>Use this when only master and rate controls are installed.</p>
+<p>Recommended settings:</p>
+<div class="table-wrap"><table><thead><tr><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td>Override section switches ON</td><td>Checked</td></tr><tr><td>IN0</td><td>Master on</td></tr><tr><td>IN1</td><td>Master off</td></tr><tr><td>IN2</td><td>Rate up</td></tr><tr><td>IN3</td><td>Rate down</td></tr><tr><td>IN4-IN6</td><td>As needed</td></tr><tr><td>IN7-IN15</td><td>Section 1-9, or Disabled</td></tr></tbody></table></div>
+<h3 id="full-section-switchbox">Full Section Switchbox</h3>
+<p>Use this when physical section switches are installed.</p>
+<p>Recommended settings:</p>
+<div class="table-wrap"><table><thead><tr><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td>Override section switches ON</td><td>Unchecked</td></tr><tr><td>IN0-IN6</td><td>Master/rate controls</td></tr><tr><td>IN7-IN15</td><td>Section 1-9 by default</td></tr></tbody></table></div>
+<h3 id="maintained-master-switch">Maintained Master Switch</h3>
+<p>If using a maintained master switch instead of separate master on/off buttons:</p>
+<ol>
+<li>Set one input action to <code>Master</code>.</li>
+<li>Wire the maintained switch so it feeds fused +12-24 VDC from a <code>12V</code> terminal to that input when ON.</li>
+<li>Set unused <code>Master on</code> and <code>Master off</code> inputs to <code>Disabled</code>, or reassign them.</li>
+</ol>
+<p>When the maintained master input turns ON, the switchbox sends master on. When it turns OFF, the switchbox sends master off.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="cannot-open-the-web-page">Cannot Open The Web Page</h3>
+<ul>
+<li>Make sure the switchbox is powered.</li>
+<li>If using WiFi, connect to the <code>CabSwitchbox</code> access point first.</li>
+<li>Try <code>http://192.168.0.71/</code> for WiFi access.</li>
+<li>Try <code>http://192.168.0.70/</code> for Ethernet access.</li>
+<li>If the IP address was changed, connect by the other interface or reflash/reset configuration if needed.</li>
+</ul>
+<h3 id="input-board-shows-off">Input Board Shows OFF</h3>
+<p>The switchbox is not detecting the input board.</p>
+<p>Check:</p>
+<ul>
+<li>Input board power and ground</li>
+<li>I2C SDA/SCL wiring</li>
+<li>Soldering around the input board</li>
+</ul>
+<p>If Input board is OFF, switch input states will not be reliable.</p>
+<h3 id="ethernet-shows-off">Ethernet Shows OFF</h3>
+<p>Check:</p>
+<ul>
+<li>Ethernet cable</li>
+<li>Link lights on the W5500 module or connector</li>
+<li>Network switch/router</li>
+<li>W5500 SPI wiring and chip select</li>
+</ul>
+<p>The switchbox can still be configured by WiFi if Ethernet is unavailable.</p>
+<h3 id="inputs-do-not-turn-on">Inputs Do Not Turn ON</h3>
+<p>For the switchbox5 board, each input needs +12-24 VDC on the <code>INx</code> terminal to turn ON.</p>
+<p>Check:</p>
+<ul>
+<li>The switch feed has +12-24 VDC.</li>
+<li>The switch output is connected to the correct <code>INx</code> terminal.</li>
+<li>The 12-24 VDC supply negative is connected to switchbox input <code>GND</code>.</li>
+<li>The input is assigned to the expected action in the setup page.</li>
+</ul>
+<h3 id="missing-section-switches-stop-operation">Missing Section Switches Stop Operation</h3>
+<p>Enable <strong>Override section switches ON</strong>. This forces section switch bits ON without changing master or rate input behavior.</p>
+<h3 id="rate-up-or-rate-down-sticks-on">Rate Up Or Rate Down Sticks ON</h3>
+<p>Check whether the input is assigned to <code>Rate up</code> or <code>Rate down</code> and whether the physical switch is stuck active. The status page shows live input states.</p>
+<p>Check whether the physical switch is stuck on, or whether +12-24 VDC is being backfed into that input.</p>
+<h3 id="wifi-station-does-not-connect">WiFi Station Does Not Connect</h3>
+<p>Check:</p>
+<ul>
+<li>SSID spelling</li>
+<li>Password spelling</li>
+<li>WiFi signal strength</li>
+<li>Whether the WiFi network uses a compatible 2.4 GHz mode</li>
+</ul>
+<p>The switchbox access point remains available even when station WiFi is enabled.</p>
+<h2 id="notes-for-firmware-updates">Notes For Firmware Updates</h2>
+<p>Configuration is stored in EEPROM. The current firmware uses config version 3.</p>
+<p>Defaults are restored when:</p>
+<ul>
+<li>EEPROM does not contain a valid switchbox config.</li>
+<li>The stored config version is not recognized.</li>
+</ul>
+<p>The firmware includes migration for older switchbox config versions 1 and 2.</p>
+</body>
+</html>

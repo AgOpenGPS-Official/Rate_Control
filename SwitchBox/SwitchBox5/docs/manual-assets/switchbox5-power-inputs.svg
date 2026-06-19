@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <defs>
+    <style>
+      .board{fill:#1f5fb8;stroke:#163f7f;stroke-width:4}
+      .terminal{fill:#9cf37f;stroke:#5fbf4b;stroke-width:3}
+      .clamp{fill:#f28b14;stroke:#a65300;stroke-width:2}
+      .label{font-family:Arial,Helvetica,sans-serif;fill:#fff;font-size:25px;font-weight:700}
+      .small{font-family:Arial,Helvetica,sans-serif;fill:#17324d;font-size:20px;font-weight:700}
+      .note{font-family:Arial,Helvetica,sans-serif;fill:#17324d;font-size:23px;font-weight:700}
+      .wirep{fill:none;stroke:#d62828;stroke-width:6}
+      .wiren{fill:none;stroke:#111;stroke-width:6}
+      .wireo{fill:none;stroke:#f28b14;stroke-width:6}
+      .box{fill:#f6fbff;stroke:#9bb8d6;stroke-width:3;rx:10}
+      .switch{fill:#fff;stroke:#333;stroke-width:4}
+    </style>
+  </defs>
+
+  <rect class="board" x="24" y="26" width="760" height="520" rx="18"/>
+  <text class="label" x="282" y="72">SwitchBox5 Terminal Wiring</text>
+
+  <rect class="terminal" x="118" y="92" width="410" height="92" rx="10"/>
+  <g>
+    <rect class="clamp" x="140" y="145" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="198" y="145" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="256" y="145" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="314" y="145" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="372" y="145" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="430" y="145" width="54" height="44" rx="4"/>
+  </g>
+  <text class="label" x="142" y="222">12Vin</text>
+  <text class="label" x="211" y="222">12V</text>
+  <text class="label" x="269" y="222">12V</text>
+  <text class="label" x="327" y="222">12V</text>
+  <text class="label" x="383" y="222">GND</text>
+  <text class="label" x="441" y="222">GND</text>
+
+  <rect class="terminal" x="118" y="258" width="410" height="92" rx="10"/>
+  <g>
+    <rect class="clamp" x="140" y="311" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="198" y="311" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="256" y="311" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="314" y="311" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="372" y="311" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="430" y="311" width="54" height="44" rx="4"/>
+  </g>
+  <text class="label" x="153" y="388">IN0</text>
+  <text class="label" x="211" y="388">IN1</text>
+  <text class="label" x="269" y="388">IN2</text>
+  <text class="label" x="327" y="388">IN3</text>
+  <text class="label" x="385" y="388">IN4</text>
+  <text class="label" x="443" y="388">IN5</text>
+
+  <rect class="terminal" x="118" y="418" width="410" height="92" rx="10"/>
+  <g>
+    <rect class="clamp" x="140" y="471" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="198" y="471" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="256" y="471" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="314" y="471" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="372" y="471" width="54" height="44" rx="4"/>
+    <rect class="clamp" x="430" y="471" width="54" height="44" rx="4"/>
+  </g>
+  <text class="label" x="153" y="548">IN6</text>
+  <text class="label" x="211" y="548">IN7</text>
+  <text class="label" x="269" y="548">IN8</text>
+  <text class="label" x="327" y="548">IN9</text>
+  <text class="label" x="379" y="548">IN10</text>
+  <text class="label" x="437" y="548">IN11</text>
+
+  <rect class="box" x="820" y="55" width="322" height="150"/>
+  <text class="note" x="846" y="91">Power the board here</text>
+  <text class="small" x="846" y="126">Supply +12-24 VDC to 12Vin</text>
+  <text class="small" x="846" y="157">Supply negative to GND</text>
+  <text class="small" x="846" y="188">Input fuse: 1 amp</text>
+
+  <rect class="box" x="820" y="247" width="322" height="220"/>
+  <text class="note" x="846" y="284">Use fused 12V for switches</text>
+  <text class="small" x="846" y="322">12V terminals are fused outputs</text>
+  <text class="small" x="846" y="354">from the board input power.</text>
+  <text class="small" x="846" y="398">Run 12V through each switch,</text>
+  <text class="small" x="846" y="430">then back to the desired INx.</text>
+
+  <path class="wirep" d="M820 118 C720 118 670 132 534 166"/>
+  <path class="wiren" d="M820 154 C715 170 660 185 455 166"/>
+  <path class="wireo" d="M525 166 C665 225 675 315 620 332"/>
+  <rect class="switch" x="595" y="307" width="80" height="48" rx="6"/>
+  <line x1="610" y1="334" x2="656" y2="314" stroke="#333" stroke-width="5"/>
+  <path class="wireo" d="M595 332 C555 332 530 333 485 333"/>
+  <text class="small" x="578" y="385">switch</text>
+
+  <text class="label" x="52" y="313" transform="rotate(-90 52 313)">INPUT VOLTAGE = 12-24 VDC</text>
+  <text class="label" x="52" y="378" transform="rotate(-90 52 378)">SEND 12-24V TO INPUTS TO ACTIVATE</text>
+</svg>
